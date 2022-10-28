@@ -38,39 +38,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-//        let db =  Firestore.firestore().collection("places")
-//        let new = DatabaseService()
-//        new.my()
-//        print(new.newPlaces)
-        
-//        db.whereField("type", isEqualTo: "Царквы").getDocuments { snapshot, error in
-//            for document in snapshot!.documents {
-//                print(document.data())
-//                print(document.data()["name"])
-//            }
-//        }
-//        db.getDocuments() { (querySnapshot, err) in
-//            if let err = err {
-//                print("Error getting documents: \(err)")
-//            } else {
-//                for document in querySnapshot!.documents {
-////                    print("\(document.documentID) => \(document.data())")
-//                    print(document.data()["type"])
-//                }
-//            }
-//        }
-//        db.document("AEvtmeldyH4TRLpvWT7b").getDocument { snap, error in
-//            print(snap?.data())
-//        }
-
-//        db.addDocument(data: [
-//            "description":"Лідскі замак - унікальны помнік абарончага дойлідства. Горад Ліда знаходзіцца ў Гродзенскай вобласці за 112 км на паўночны ўсход ад Гродна. Тут захаваўся сярэднявечны замак - выдатны помнік абарончага дойлідства XIV ст. Будаўніцтва замка было распачата ў 1323 г. вялікім князем Вялікага княства Літоўскага Гедымінам Замак узводзіўся на насыпным пясчаным узгорку, акружаным багністымі берагамі рэк Лідзея і Каменк і ровам, які злучае гэтыя рэкі з поўдня і які адлучае замак ад горада За сваю гісторыю замак вытрымаў мноства бітваў і аблог. У XVIII ст. ён страціў сваё стратэгічна значэнне і пачаў паступова разбурацца У 1891 годзе цэнтральная частка горада Ліда моцна пацярпела пры пажары і камяні з паўднёва-заходня вежы і часткі заходняй сцяны замка былі выкарыстаны для аднаўлення будынкаў, якія пацярпелі а агню У 1920-х пачалася кансервацыя замка, якая завяршылася ў 1982 г. Цяпер вядзецца рэстаўрацыя сцен і веж Лідскі замак, як і Мірскі замак, знаходзіцца пад аховай дзяржавы.",
-//            "image": ["https://firebasestorage.googleapis.com/v0/b/belarus-8fdea.appspot.com/o/places%2FIMG_7204.jpg?alt=media&token=b705171e-3433-4059-a16d-263924008181","https://firebasestorage.googleapis.com/v0/b/belarus-8fdea.appspot.com/o/places%2FIMG_7205.jpg?alt=media&token=65d39372-429c-46ef-ad8e-20c7f2f66a87","https://firebasestorage.googleapis.com/v0/b/belarus-8fdea.appspot.com/o/places%2FIMG_7206.jpg?alt=media&token=55fe9694-4951-4794-a548-1883e70e593e","https://firebasestorage.googleapis.com/v0/b/belarus-8fdea.appspot.com/o/places%2FIMG_7207.jpg?alt=media&token=d3b89791-01b0-4c61-a4f6-fbc4f5e05e57","https://firebasestorage.googleapis.com/v0/b/belarus-8fdea.appspot.com/o/places%2FIMG_7208.jpg?alt=media&token=10a8de8d-5bcf-4978-90dc-cbb9d3873eea","https://firebasestorage.googleapis.com/v0/b/belarus-8fdea.appspot.com/o/places%2FIMG_7209.jpg?alt=media&token=48a0e871-deec-4d38-acfe-3ce0767ad61e"],
-//            "location": GeoPoint(latitude: 53.887416, longitude: 25.302808),
-//            "name": "Лідскі замак",
-//            "type": "Замкі"
-//        ])
-        
     }
     
     private func configureUI() {
