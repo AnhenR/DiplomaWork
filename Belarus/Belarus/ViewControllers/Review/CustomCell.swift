@@ -38,7 +38,23 @@ class CustomCell: UICollectionViewCell {
     }
     
     
-    func configure(newImage: UIImage) {
-        placesImage.image = newImage
+    func configure(newImage: String) {
+        //        placesImage.image = newImage
+        
+        Task() {
+            
+            let url = URL(string: newImage )!
+            
+            let request = URLRequest(url: url)
+            do {
+                let data = try await URLSession.shared.data(for: request).0
+                let image = UIImage(data: data)
+                DispatchQueue.main.async {
+                self.placesImage.image = image
+                }
+            } catch {
+                
+            }
+        }
     }
 }

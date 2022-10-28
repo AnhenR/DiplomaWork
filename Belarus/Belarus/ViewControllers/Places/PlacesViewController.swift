@@ -35,6 +35,9 @@ class PlacesViewController: UIViewController {
         super.viewDidLoad()
         configureUI()
         configureTable()
+        viewModel.my {
+            self.placesTableView.reloadData()
+        }
     }
     
     private func configureUI() {
@@ -77,25 +80,25 @@ class PlacesViewController: UIViewController {
 extension PlacesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        viewModel.placesArray.count
+        viewModel.displayPlaces.count
         }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        viewModel.placesArray[section].type.rawValue
+        viewModel.displayPlaces[section].first?.type.description
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        navigationController?.pushViewController(ReviewViewController(viewModel: .init(review: .init(imagePlace:Database.shared.reviewArray[indexPath.row].imagePlace, descriptionPlace: Database.shared.reviewArray[indexPath.row].descriptionPlace, latitude: Database.shared.reviewArray[indexPath.row].latitude, longitude: Database.shared.reviewArray[indexPath.row].longitude))), animated: true)
+        let vc = ReviewViewController(viewModel: .init(review: viewModel.displayPlaces[indexPath.section][indexPath.row]))
+        navigationController?.pushViewController(vc, animated: true)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.placesArray[section].description.count
+        viewModel.displayPlaces[section].count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PlacesCell", for: indexPath as IndexPath)
-        cell.textLabel?.text = viewModel.placesArray[indexPath.section].description[indexPath.row]
+        cell.textLabel?.text = viewModel.displayPlaces[indexPath.section][indexPath.row].name
         cell.accessoryType = .disclosureIndicator
         cell.backgroundColor = .darkGray
         cell.alpha = 0.9

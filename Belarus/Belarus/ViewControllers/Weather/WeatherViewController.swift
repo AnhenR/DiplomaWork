@@ -121,6 +121,7 @@ extension WeatherViewController: UICollectionViewDelegate, UICollectionViewDataS
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WeatherCell", for: indexPath as IndexPath) as! WeatherCustomCell
         
         viewModel.bindWeather.bind(\.time[indexPath.row], to: cell.time, \.text) { value in
+            print(value)
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm"
             let dataDate = dateFormatter.date(from: value)

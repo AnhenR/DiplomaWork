@@ -119,16 +119,22 @@ class MapViewController: UIViewController {
     @objc private func didTapZoom(sender: UIButton) {
         switch sender.tag {
         case 1 :
-            mapView.region.span.longitudeDelta /= 1.1
-            mapView.region.span.latitudeDelta /= 1.1
+            zoomMap(byFactor: 0.5)
         case 2 :
-            mapView.region.span.longitudeDelta *= 1.1
-            mapView.region.span.latitudeDelta *= 1.1
+            zoomMap(byFactor: 1.1)
         default:
             print("Error")
         }
     }
     
+   private func zoomMap(byFactor delta: Double) {
+        var region: MKCoordinateRegion = self.mapView.region
+        var span: MKCoordinateSpan = mapView.region.span
+        span.latitudeDelta *= delta
+        span.longitudeDelta *= delta
+        region.span = span
+        mapView.setRegion(region, animated: true)
+    }
 }
 
 private extension MKMapView {

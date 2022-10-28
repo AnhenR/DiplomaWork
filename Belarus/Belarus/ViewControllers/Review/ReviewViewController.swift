@@ -116,7 +116,7 @@ class ReviewViewController: UIViewController, UIScrollViewDelegate {
             scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -5),
             scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -400)
         ])
-        descriptionLabel.text = viewModel.review.descriptionPlace
+        descriptionLabel.text = viewModel.review.description
         scrollView.addSubview(descriptionLabel)
         scrollView.addShadowOnSubviews()
         NSLayoutConstraint.activate([
@@ -154,23 +154,23 @@ class ReviewViewController: UIViewController, UIScrollViewDelegate {
     }
     
     @objc private func didTapWeather() {
-        navigationController?.pushViewController(WeatherViewController(viewModel: .init(data: .init(latitude: viewModel.review.latitude, longitude: viewModel.review.longitude))), animated: true)
+        navigationController?.pushViewController(WeatherViewController(viewModel: .init(data: .init(latitude: viewModel.review.location.latitude, longitude: viewModel.review.location.longitude))), animated: true)
     }
     
     @objc private func didTapMap() {
-        navigationController?.pushViewController(MapViewController(viewModel: .init(map: .init(latitude: viewModel.review.latitude, longitude: viewModel.review.longitude))), animated: true)
+        navigationController?.pushViewController(MapViewController(viewModel: .init(map: .init(latitude: viewModel.review.location.latitude, longitude: viewModel.review.location.longitude))), animated: true)
     }
 }
 
 extension ReviewViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.review.imagePlace.count
+        return viewModel.review.image.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath as IndexPath) as! CustomCell
-        cell.configure(newImage: viewModel.review.imagePlace[indexPath.row])
+        cell.configure(newImage: viewModel.review.image[indexPath.row])
         return cell
     }
 }

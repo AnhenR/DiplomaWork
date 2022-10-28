@@ -18,7 +18,6 @@
 		CE2F718A28FCA51400481299 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2F718928FCA51400481299 /* ViewExtension.swift */; };
 		CE2F718D28FDBA3B00481299 /* PlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2F718C28FDBA3B00481299 /* PlacesViewModel.swift */; };
 		CE2F718F28FDBAD400481299 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2F718E28FDBAD400481299 /* ReviewViewController.swift */; };
-		CE47BB312900A402000C5A74 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE47BB302900A402000C5A74 /* Database.swift */; };
 		CE59216B2901F8C5001C536D /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE59216A2901F8C5001C536D /* WeatherModel.swift */; };
 		CE59216D2901F8E5001C536D /* WeatherRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE59216C2901F8E5001C536D /* WeatherRouter.swift */; };
 		CE59216F2901F906001C536D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE59216E2901F906001C536D /* NetworkService.swift */; };
@@ -27,13 +26,20 @@
 		CE5921792902D8C3001C536D /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5921782902D8C3001C536D /* MapViewModel.swift */; };
 		CE59217D2902DDE9001C536D /* clouds.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CE59217C2902DDE9001C536D /* clouds.mp4 */; };
 		CE59217F29073306001C536D /* WeatherCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE59217E29073306001C536D /* WeatherCustomCell.swift */; };
+		CE5921A5290AC4DE001C536D /* New.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5921A4290AC4DE001C536D /* New.swift */; };
+		CE5921A7290AE379001C536D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE5921A6290AE379001C536D /* GoogleService-Info.plist */; };
+		CE5921A9290AF065001C536D /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5921A8290AF064001C536D /* DatabaseService.swift */; };
 		CE6C8BD328FF13A40008E452 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C8BD228FF13A40008E452 /* CustomCell.swift */; };
 		CE6C8BDD290031370008E452 /* ReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C8BDC290031370008E452 /* ReviewViewModel.swift */; };
 		CE6C8BE429006E6A0008E452 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C8BE329006E6A0008E452 /* WeatherViewModel.swift */; };
 		CE6C8BE6290095960008E452 /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C8BE5290095960008E452 /* CGPointExtension.swift */; };
+		D6B443DA1D076D8252F14200 /* Pods_Belarus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88694D70E873A25F95FCA24C /* Pods_Belarus.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3ABF6FA54B603E2798BFA409 /* Pods-Belarus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Belarus.debug.xcconfig"; path = "Target Support Files/Pods-Belarus/Pods-Belarus.debug.xcconfig"; sourceTree = "<group>"; };
+		8072B104E1DB57A1F67362CD /* Pods-Belarus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Belarus.release.xcconfig"; path = "Target Support Files/Pods-Belarus/Pods-Belarus.release.xcconfig"; sourceTree = "<group>"; };
+		88694D70E873A25F95FCA24C /* Pods_Belarus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Belarus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2F716D28F8591400481299 /* Belarus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Belarus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2F717028F8591400481299 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE2F717228F8591400481299 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,7 +53,6 @@
 		CE2F718928FCA51400481299 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		CE2F718C28FDBA3B00481299 /* PlacesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewModel.swift; sourceTree = "<group>"; };
 		CE2F718E28FDBAD400481299 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
-		CE47BB302900A402000C5A74 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		CE59216A2901F8C5001C536D /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		CE59216C2901F8E5001C536D /* WeatherRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRouter.swift; sourceTree = "<group>"; };
 		CE59216E2901F906001C536D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -56,6 +61,9 @@
 		CE5921782902D8C3001C536D /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		CE59217C2902DDE9001C536D /* clouds.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = clouds.mp4; sourceTree = "<group>"; };
 		CE59217E29073306001C536D /* WeatherCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCustomCell.swift; sourceTree = "<group>"; };
+		CE5921A4290AC4DE001C536D /* New.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New.swift; sourceTree = "<group>"; };
+		CE5921A6290AE379001C536D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE5921A8290AF064001C536D /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		CE6C8BD228FF13A40008E452 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		CE6C8BDC290031370008E452 /* ReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewModel.swift; sourceTree = "<group>"; };
 		CE6C8BE329006E6A0008E452 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
@@ -67,17 +75,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6B443DA1D076D8252F14200 /* Pods_Belarus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50704BB64D71A2064CCF70C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88694D70E873A25F95FCA24C /* Pods_Belarus.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		73C9144523E2C15C1140A2B6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3ABF6FA54B603E2798BFA409 /* Pods-Belarus.debug.xcconfig */,
+				8072B104E1DB57A1F67362CD /* Pods-Belarus.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CE2F716428F8591300481299 = {
 			isa = PBXGroup;
 			children = (
 				CE2F716F28F8591400481299 /* Belarus */,
 				CE2F716E28F8591400481299 /* Products */,
+				73C9144523E2C15C1140A2B6 /* Pods */,
+				50704BB64D71A2064CCF70C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,11 +125,12 @@
 				CE2F717028F8591400481299 /* AppDelegate.swift */,
 				CE2F717228F8591400481299 /* SceneDelegate.swift */,
 				CE2F718B28FCA51A00481299 /* Extensions */,
-				CE47BB302900A402000C5A74 /* Database.swift */,
+				CE5921A8290AF064001C536D /* DatabaseService.swift */,
 				CE2F718428F85C2700481299 /* ViewControllers */,
 				CE2F717928F8591700481299 /* Assets.xcassets */,
 				CE59217C2902DDE9001C536D /* clouds.mp4 */,
 				CE2F717B28F8591700481299 /* LaunchScreen.storyboard */,
+				CE5921A6290AE379001C536D /* GoogleService-Info.plist */,
 				CE2F717E28F8591700481299 /* Info.plist */,
 			);
 			path = Belarus;
@@ -166,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				CE2F717428F8591400481299 /* ViewController.swift */,
+				CE5921A4290AC4DE001C536D /* New.swift */,
 				CE2F717628F8591400481299 /* Main.storyboard */,
 			);
 			path = Main;
@@ -216,9 +246,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE2F718128F8591700481299 /* Build configuration list for PBXNativeTarget "Belarus" */;
 			buildPhases = (
+				74F4172710196F5E445BBCE5 /* [CP] Check Pods Manifest.lock */,
 				CE2F716928F8591400481299 /* Sources */,
 				CE2F716A28F8591400481299 /* Frameworks */,
 				CE2F716B28F8591400481299 /* Resources */,
+				882D8F4BACF8693CC0EA165B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -269,12 +301,55 @@
 			files = (
 				CE2F717D28F8591700481299 /* LaunchScreen.storyboard in Resources */,
 				CE2F717A28F8591700481299 /* Assets.xcassets in Resources */,
+				CE5921A7290AE379001C536D /* GoogleService-Info.plist in Resources */,
 				CE2F717828F8591400481299 /* Main.storyboard in Resources */,
 				CE59217D2902DDE9001C536D /* clouds.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		74F4172710196F5E445BBCE5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Belarus-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		882D8F4BACF8693CC0EA165B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Belarus/Pods-Belarus-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Belarus/Pods-Belarus-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Belarus/Pods-Belarus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE2F716928F8591400481299 /* Sources */ = {
@@ -288,6 +363,7 @@
 				CE59216F2901F906001C536D /* NetworkService.swift in Sources */,
 				CE2F718828F8720200481299 /* WeatherViewController.swift in Sources */,
 				CE2F717528F8591400481299 /* ViewController.swift in Sources */,
+				CE5921A5290AC4DE001C536D /* New.swift in Sources */,
 				CE5921772902D8A4001C536D /* MapViewController.swift in Sources */,
 				CE6C8BDD290031370008E452 /* ReviewViewModel.swift in Sources */,
 				CE59217F29073306001C536D /* WeatherCustomCell.swift in Sources */,
@@ -295,11 +371,11 @@
 				CE6C8BD328FF13A40008E452 /* CustomCell.swift in Sources */,
 				CE5921792902D8C3001C536D /* MapViewModel.swift in Sources */,
 				CE2F718D28FDBA3B00481299 /* PlacesViewModel.swift in Sources */,
+				CE5921A9290AF065001C536D /* DatabaseService.swift in Sources */,
 				CE6C8BE6290095960008E452 /* CGPointExtension.swift in Sources */,
 				CE2F717128F8591400481299 /* AppDelegate.swift in Sources */,
 				CE2F718F28FDBAD400481299 /* ReviewViewController.swift in Sources */,
 				CE2F717328F8591400481299 /* SceneDelegate.swift in Sources */,
-				CE47BB312900A402000C5A74 /* Database.swift in Sources */,
 				CE59216B2901F8C5001C536D /* WeatherModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,6 +520,7 @@
 		};
 		CE2F718228F8591700481299 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3ABF6FA54B603E2798BFA409 /* Pods-Belarus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -472,6 +549,7 @@
 		};
 		CE2F718328F8591700481299 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8072B104E1DB57A1F67362CD /* Pods-Belarus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
