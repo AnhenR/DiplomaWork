@@ -19,7 +19,7 @@ class Capital: NSObject, MKAnnotation {
 
 class MapViewController: UIViewController {
     
-    let viewModel: MapViewModel
+    private let viewModel: MapViewModel
     
     init(viewModel:MapViewModel) {
         self.viewModel = viewModel

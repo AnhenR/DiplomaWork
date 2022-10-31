@@ -10,7 +10,7 @@ import UIKit
 
 class PlacesViewController: UIViewController {
     
-    var viewModel = PlacesViewModel()
+    private let viewModel = PlacesViewModel()
     
     private let mainImage: UIImageView = {
         let image = UIImageView()
@@ -31,6 +31,13 @@ class PlacesViewController: UIViewController {
     
     private var placesTableView = UITableView()
     
+    private let activityIndicator: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView()
+        activityIndicator.style = .large
+        activityIndicator.color = .darkGray
+        return activityIndicator
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -38,12 +45,15 @@ class PlacesViewController: UIViewController {
         viewModel.my {
             self.placesTableView.reloadData()
         }
+        viewModel.activityIndicatorVisability.bind(to: activityIndicator, \.isHidden)
+        activityIndicator.startAnimating()
     }
     
     private func configureUI() {
         navigationItem.backButtonTitle = "Выйсці"
-        view.addSubview(mainImage)
+        view.addSubviews(mainImage, activityIndicator)
         view.translatesAutoresizingMaskIntoSubviews()
+        view.bringSubviewToFront(activityIndicator)
         mainImage.addSubview(descriptionLabel)
         mainImage.addShadowOnSubviews()
         NSLayoutConstraint.activate([
@@ -55,7 +65,12 @@ class PlacesViewController: UIViewController {
             descriptionLabel.topAnchor.constraint(equalTo: mainImage.topAnchor, constant: 100),
             descriptionLabel.leadingAnchor.constraint(equalTo: mainImage.leadingAnchor, constant: 10),
             descriptionLabel.trailingAnchor.constraint(equalTo: mainImage.trailingAnchor, constant: -10),
-            descriptionLabel.heightAnchor.constraint(equalToConstant: 50)
+            descriptionLabel.heightAnchor.constraint(equalToConstant: 50),
+            
+            activityIndicator.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 250),
+            activityIndicator.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 140),
+            activityIndicator.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -140),
+            activityIndicator.heightAnchor.constraint(equalToConstant: 60)
         ])
     }
     

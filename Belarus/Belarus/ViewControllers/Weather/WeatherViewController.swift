@@ -11,7 +11,7 @@ import AVFoundation
 
 class WeatherViewController: UIViewController {
     
-    let viewModel: WeatherViewModel
+    private let viewModel: WeatherViewModel
     
     init(viewModel:WeatherViewModel) {
         self.viewModel = viewModel
@@ -32,7 +32,7 @@ class WeatherViewController: UIViewController {
         return label
     }()
     
-    private var activityIndicator: UIActivityIndicatorView = {
+    private let activityIndicator: UIActivityIndicatorView = {
         let activityIndicator = UIActivityIndicatorView()
         activityIndicator.style = .large
         activityIndicator.color = .darkGray

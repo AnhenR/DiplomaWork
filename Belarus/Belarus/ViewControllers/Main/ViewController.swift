@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         label.textColor = .white
         label.numberOfLines = 0
         label.textAlignment = .center
+        label.font = UIFont(name:"HelveticaNeue-Bold", size: 18.0)
         return label
     }()
     
@@ -24,6 +25,7 @@ class ViewController: UIViewController {
         image.image = UIImage(named: "cornflowers")
         image.contentMode = .scaleToFill
         image.isUserInteractionEnabled = true
+        image.addAlpha()
         return image
     }()
     
@@ -32,6 +34,7 @@ class ViewController: UIViewController {
         button.setTitle("Азнаёміцца", for: .normal)
         button.backgroundColor = .darkGray
         button.layer.cornerRadius = 30
+        button.addAlpha()
         return button
     }()
 
@@ -44,7 +47,6 @@ class ViewController: UIViewController {
         navigationItem.backButtonTitle = "Выйсці"
         view.addSubview(mainImage)
         view.translatesAutoresizingMaskIntoSubviews()
-        view.addAlpha()
         mainImage.addSubviews(mainLabel, cityButton)
         mainImage.translatesAutoresizingMaskIntoSubviews()
         mainImage.addShadowOnSubviews()

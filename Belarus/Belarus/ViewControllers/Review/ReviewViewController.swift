@@ -10,7 +10,7 @@ import UIKit
 
 class ReviewViewController: UIViewController, UIScrollViewDelegate {
     
-    let viewModel: ReviewViewModel
+    private let viewModel: ReviewViewModel
     
     init(viewModel:ReviewViewModel) {
         self.viewModel = viewModel

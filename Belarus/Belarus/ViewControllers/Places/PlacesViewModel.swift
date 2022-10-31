@@ -37,8 +37,10 @@ class PlacesViewModel {
     let db = Firestore.firestore().collection("places")
     var newPlaces: [PlacesResponseModel] = []
     var displayPlaces: [[PlacesResponseModel]] = []
+    let activityIndicatorVisability: Bindable<Bool> = Bindable()
     
     func my(completion: @escaping VoidHandler) {
+        activityIndicatorVisability.update(with: false)
         db.getDocuments { snapshot, error in
             if let error = error {
                 print("Error getting documents: \(error)")
@@ -54,6 +56,7 @@ class PlacesViewModel {
                     self.newPlaces.append(place)
                 }
                 self.configureDisplayPlaces(completion: completion)
+                self.activityIndicatorVisability.update(with: true)
             }
         }
     }
