@@ -26,7 +26,6 @@
 		CE5921792902D8C3001C536D /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5921782902D8C3001C536D /* MapViewModel.swift */; };
 		CE59217D2902DDE9001C536D /* clouds.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CE59217C2902DDE9001C536D /* clouds.mp4 */; };
 		CE59217F29073306001C536D /* WeatherCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE59217E29073306001C536D /* WeatherCustomCell.swift */; };
-		CE5921A5290AC4DE001C536D /* New.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5921A4290AC4DE001C536D /* New.swift */; };
 		CE5921A7290AE379001C536D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE5921A6290AE379001C536D /* GoogleService-Info.plist */; };
 		CE5921A9290AF065001C536D /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5921A8290AF064001C536D /* DatabaseService.swift */; };
 		CE6C8BD328FF13A40008E452 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6C8BD228FF13A40008E452 /* CustomCell.swift */; };
@@ -61,7 +60,6 @@
 		CE5921782902D8C3001C536D /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		CE59217C2902DDE9001C536D /* clouds.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = clouds.mp4; sourceTree = "<group>"; };
 		CE59217E29073306001C536D /* WeatherCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCustomCell.swift; sourceTree = "<group>"; };
-		CE5921A4290AC4DE001C536D /* New.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New.swift; sourceTree = "<group>"; };
 		CE5921A6290AE379001C536D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE5921A8290AF064001C536D /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		CE6C8BD228FF13A40008E452 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
@@ -125,7 +123,7 @@
 				CE2F717028F8591400481299 /* AppDelegate.swift */,
 				CE2F717228F8591400481299 /* SceneDelegate.swift */,
 				CE2F718B28FCA51A00481299 /* Extensions */,
-				CE5921A8290AF064001C536D /* DatabaseService.swift */,
+				CE5921AA290FF846001C536D /* Database */,
 				CE2F718428F85C2700481299 /* ViewControllers */,
 				CE2F717928F8591700481299 /* Assets.xcassets */,
 				CE59217C2902DDE9001C536D /* clouds.mp4 */,
@@ -195,7 +193,6 @@
 			isa = PBXGroup;
 			children = (
 				CE2F717428F8591400481299 /* ViewController.swift */,
-				CE5921A4290AC4DE001C536D /* New.swift */,
 				CE2F717628F8591400481299 /* Main.storyboard */,
 			);
 			path = Main;
@@ -208,6 +205,14 @@
 				CE5921762902D8A4001C536D /* MapViewController.swift */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		CE5921AA290FF846001C536D /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				CE5921A8290AF064001C536D /* DatabaseService.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 		CE6C8BD128FF136D0008E452 /* Review */ = {
@@ -363,7 +368,6 @@
 				CE59216F2901F906001C536D /* NetworkService.swift in Sources */,
 				CE2F718828F8720200481299 /* WeatherViewController.swift in Sources */,
 				CE2F717528F8591400481299 /* ViewController.swift in Sources */,
-				CE5921A5290AC4DE001C536D /* New.swift in Sources */,
 				CE5921772902D8A4001C536D /* MapViewController.swift in Sources */,
 				CE6C8BDD290031370008E452 /* ReviewViewModel.swift in Sources */,
 				CE59217F29073306001C536D /* WeatherCustomCell.swift in Sources */,

@@ -29,8 +29,15 @@ class WeatherViewController: UIViewController {
         label.numberOfLines = 0
         label.text = "Тут вы маеце магчымасць азнаёміцца з прагнозам надвор'я ў цікавым для вас месцы Беларусі на бліжэйшыя гадзіны."
         label.textAlignment = .center
-        label.addShadow()
         return label
+    }()
+    
+    private var activityIndicator: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView()
+        activityIndicator.style = .large
+        activityIndicator.color = .darkGray
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        return activityIndicator
     }()
     
     private var looper: AVPlayerLooper?
@@ -44,22 +51,30 @@ class WeatherViewController: UIViewController {
         weatherCollection = UICollectionView(frame: .zero, collectionViewLayout: generateLayout())
         weatherCollection.setCollectionViewLayout(generateLayout(), animated: true)
         setupCollection()
+        activityIndicator.isHidden = true
         weatherCollection.delegate = self
         weatherCollection.dataSource = self
         weatherCollection.register(WeatherCustomCell.self, forCellWithReuseIdentifier: "WeatherCell")
         Task(priority: .userInitiated) {
             await viewModel.loadWeather()
         }
+        viewModel.activityIndicatorVisability.bind(to: activityIndicator, \.isHidden)
+        activityIndicator.startAnimating()
     }
     
     private func configureUI() {
-        view.addSubview(descriptionLabel)
-        view.bringSubviewToFront(descriptionLabel)
+        view.addSubviews(descriptionLabel, activityIndicator)
+        view.bringSubviewsToFront(descriptionLabel, activityIndicator)
+        view.addShadowOnSubviews()
         NSLayoutConstraint.activate([
             descriptionLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40),
             descriptionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             descriptionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -20),
-            descriptionLabel.heightAnchor.constraint(equalToConstant: 100)
+            descriptionLabel.heightAnchor.constraint(equalToConstant: 100),
+            activityIndicator.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 150),
+            activityIndicator.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 140),
+            activityIndicator.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -140),
+            activityIndicator.heightAnchor.constraint(equalToConstant: 60)
         ])
     }
     
@@ -121,7 +136,6 @@ extension WeatherViewController: UICollectionViewDelegate, UICollectionViewDataS
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WeatherCell", for: indexPath as IndexPath) as! WeatherCustomCell
         
         viewModel.bindWeather.bind(\.time[indexPath.row], to: cell.time, \.text) { value in
-            print(value)
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm"
             let dataDate = dateFormatter.date(from: value)

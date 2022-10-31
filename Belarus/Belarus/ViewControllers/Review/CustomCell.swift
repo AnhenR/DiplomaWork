@@ -39,7 +39,6 @@ class CustomCell: UICollectionViewCell {
     
     
     func configure(newImage: String) {
-        //        placesImage.image = newImage
         
         Task() {
             

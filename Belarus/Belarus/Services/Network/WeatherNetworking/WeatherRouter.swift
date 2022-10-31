@@ -37,8 +37,6 @@ enum WeatherRouter: NetworkRouterProtocol {
                 URLQueryItem(name: "latitude", value: "\(latitude)"),
                 URLQueryItem(name: "longitude", value: "\(longitude)"),
                 URLQueryItem(name: "hourly", value: "temperature_2m,apparent_temperature,rain,snowfall,cloudcover,windspeed_10m")
-//                URLQueryItem(name: "timezone", value: timeZone),
-//                URLQueryItem(name: "daily", value: daily.joined(separator: ","))
             ]
         }
     }

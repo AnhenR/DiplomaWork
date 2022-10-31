@@ -43,4 +43,8 @@ extension UIView {
     func translatesAutoresizingMaskIntoSubviews() {
         subviews.forEach{ $0.translatesAutoresizingMaskIntoConstraints = false }
     }
+    
+    func bringSubviewsToFront(_ views: UIView...) {
+        views.forEach{ bringSubviewToFront($0)}
+    }
 }

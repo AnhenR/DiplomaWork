@@ -33,6 +33,18 @@ extension Bindable {
         observations = observations.filter { $0(newValue) }
     }
 }
+// for the activityIndicator
+extension Bindable {
+    func bind<T: AnyObject, V>(to object: T, _ objectKeyPath: ReferenceWritableKeyPath<T, V>) {
+        addObservation(for: object) { object, value in
+            DispatchQueue.main.async {
+                if let value = value as? V {
+                    object[keyPath: objectKeyPath] = value
+                }
+            }
+        }
+    }
+}
 
 extension Bindable {
     func bind<T: AnyObject, V>(

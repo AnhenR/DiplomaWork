@@ -27,11 +27,8 @@ enum TypePlaces: String, CaseIterable {
 }
 
 struct Places {
-    
     var type: TypePlaces
     var description: [String]
-//    var type: [String]
-//    var places: [String]
 }
 
 
@@ -71,13 +68,4 @@ class PlacesViewModel {
         displayPlaces.append(nature)
         completion()
     }
-    var placesArray = [Places(type: .castle, description: ["Нясвіжскі замак", "Косаўскі замак", "Мірскі замак", "Лідскі замак"]),
-                       Places(type: .nature, description: ["тэрыконы", "крэйдавыя кар'еры", "возера Белае і Нарач"]),
-                       Places(type: .church, description: ["царква ў Сар'і", "касцёл у Гервятах", "храм у Чачэрску"])]
-//    let place: Places
-//
-//    init(place: Places){
-//        self.place = place
-//    }
-    
 }
